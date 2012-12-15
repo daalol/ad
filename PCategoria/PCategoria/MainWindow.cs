@@ -36,11 +36,11 @@ public partial class MainWindow: Gtk.Window
 		IDataReader dataReader = dbCommand.ExecuteReader();
 		
 		while(dataReader.Read()){
-			liststore.AppendValues(dataReader("id").ToString,dataReader("nombre").ToString);
-		}
-		dataReader.Close ();
 			
+			liststore.AppendValues(dataReader("id").ToString(), dataReader("nombre").ToString());
+		}
 		
+		dataReader.Close ();
 		dbConnection.Close();
 	}
 	
