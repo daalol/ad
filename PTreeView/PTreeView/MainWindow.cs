@@ -7,6 +7,8 @@ public partial class MainWindow: Gtk.Window
 	{
 		Build ();
 		
+		//treeView.Selection.Mode = SelectionMode.Multiple;
+		
 		treeView.AppendColumn("Columna uno", new CellRendererText (), "text", 0);
 		treeView.AppendColumn("Columna dos", new CellRendererText (), "text", 1);		
 		
