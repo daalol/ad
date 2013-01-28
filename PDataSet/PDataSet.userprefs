@@ -1,0 +1,26 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PDataSet/PDataSet.cs">
+    <Files>
+      <File FileName="PDataSet/Main.cs" Line="15" Column="1" />
+      <File FileName="PDataSet/PDataSet.cs" Line="19" Column="39" />
+      <File FileName="PDataSet/MainWindow.cs" Line="34" Column="21" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="PDataSet" expanded="True">
+            <Node name="PDataSet.cs" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ConnectionManagerPad">
+        <State selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
