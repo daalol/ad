@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hibernate-configuration xmlns="urn:hibernate-configuration-2.2>
+
+
+
+
+<!--Este archivo tiene que estar como recurso embebido (propiedades->accion de construccion->Embedded...) -->			
