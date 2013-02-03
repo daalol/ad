@@ -4,7 +4,11 @@
 					namespace="Serpis.Ad">
 	
 	<class name="Categoria">
-		<id name="id" unsaved-value="0"/> 
+			<id name="Id" unsaved-value="0">
+				<generator class="sequence">
+					<param name="sequence">categoria_id_seq</param>
+				</generator>
+			</id>
 		
 		<property name="Nombre"/>
 	</class>
