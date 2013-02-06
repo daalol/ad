@@ -14,6 +14,7 @@ public partial class MainWindow: Gtk.Window
 		//Clase configuration de NHibernate
 		Configuration configuration = new configuration();
 		configuration.Configure();
+		configuration.SetProperty(NHibernate.Cfg.Environment.Hbm2ddlKeyWords, "none");
 		
 		configuration.AddAssembly(typeof(Categoria).Assembly);
 		
@@ -21,16 +22,42 @@ public partial class MainWindow: Gtk.Window
 		
 		//Se encarga crear sesiones en nuestra aplicacion.
 		ISessionFactory sessionFactory = configuration.BuildSessionFactory ();
+			
+		updateCategoria(sessionFactory);
+		
+		sessionFactory.Close ();
+	}
+	
+	
+	//metodo para modificar una categoria
+	protected void updateCategoria(ISessionFactory sessionFactory){
 		
 		//Abrimos la sesion
 		ISession session = sessionFactory.OpenSession();
+		try{
 		Categoria categoria = (Categoria)session.Load(typeof(Categoria), 2L);
 		Console.WriteLine("Categoria Id={0} Nombre={1}", categoria.Id, categoria.Nombre);
 		categoria.Nombre = DateTime.Now.ToString ();
 		session.SaveOrUpdate (categoria);
-		session.Close ();
 		
-		sessionFactory.Close ();
+		session.FLUSH();//CONFIRMAR LOS CAMBIOS
+		}finally{
+		session.Close ();
+		}
+	}
+	
+	//metodo para insertar una categoria
+	private void insertCategoria(ISessionFactory sessionFactory){
+		//Abreviatura del try-finally-close del metodo anterior
+		using(ISession session = sessionFactory.OpenSession()){
+		Categoria categoria = new Categoria();
+		categoria.Nombre= "Nueva "+DateTime.Now.ToString();
+		
+		session.SaveOrUpdate (categoria);
+		
+		session.FLUSH();//CONFIRMAR LOS CAMBIOS
+		
+		}
 	}
 	
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
