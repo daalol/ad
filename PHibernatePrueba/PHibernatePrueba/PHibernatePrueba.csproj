@@ -70,6 +70,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catagoria.hbm.xml" />
     <EmbeddedResource Include="hibernate.cfg.xml" />
+    <EmbeddedResource Include="Articulo.hmb.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="Articulo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

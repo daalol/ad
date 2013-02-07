@@ -5,8 +5,8 @@ namespace Serpis.Ad
 	public class Categoria
 	{	
 			//Abraviaturas de metodos getter!!!!
-			public long Id {get; set;}
-			public string Nombre {get; set;}
+			public virtual long Id {get; set;}
+			public virtual string Nombre {get; set;}
 	}
 }
 

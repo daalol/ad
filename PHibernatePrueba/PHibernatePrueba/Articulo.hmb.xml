@@ -3,19 +3,20 @@
 					assembly="PHibernatePrueba"
 					namespace="Serpis.Ad">
 	
-	<class name="Categoria">
+	<class name="Articulo">
 			<id name="Id" unsaved-value="0">
 				<generator class="sequence">
-					<param name="sequence">categoria_id_seq</param>
+					<param name="sequence">articulo_id_seq</param>
 				</generator>
 			</id>
 		
 		<property name="Nombre"/>
+		<property name="Precio"/> <!-- Porque en algunos pone el tipo y en otros no-->
 		
+		<!-- TO DO Mapear propiedad categoria-->
+		<one-to-one name="Categoria" class="Categoria"></one-to-one>
+
 		<!-- -->
-		<one-to-one name="Articulo" class="Articulo"></one-to-one>
-		<!-- -->
-		
 	</class>
 </hibernate-mapping>	
 <!--Este archivo tiene que estar como recurso embebido (propiedades->accion de construccion->Embedded...) -->
