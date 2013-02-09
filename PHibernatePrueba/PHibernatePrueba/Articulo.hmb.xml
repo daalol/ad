@@ -14,7 +14,7 @@
 		<property name="Precio"/> <!-- Porque en algunos pone el tipo y en otros no-->
 		
 		<!-- TO DO Mapear propiedad categoria-->
-		<one-to-one name="Categoria" class="Categoria"></one-to-one>
+		<many-to-one name="Categoria"></many-to-one>
 
 		<!-- -->
 	</class>
